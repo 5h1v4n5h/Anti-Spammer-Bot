@@ -1,10 +1,6 @@
 from flask import Flask
 from threading import Thread
 
-'''
-Hosting server so that uptimerobot can ping it and prevent bot from sleeping.
-'''
-
 app = Flask('')
 
 @app.route('/')

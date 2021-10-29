@@ -1,5 +1,7 @@
-# Anti Spammer Discord Bot
+# Python
 
-This bot looks for links in shared message and checks the url using third party api and replys the message
+This is the Template Repl for Python.
+
+Python is a dynamic language emphasizing readability.
 
 [Check out the official docs here](https://www.python.org/).
