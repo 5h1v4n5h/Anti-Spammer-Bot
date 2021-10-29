@@ -31,12 +31,19 @@ async def on_message(message):
         mess = f'{message.author.mention}'+mess 
         await message.reply(mess)
         #await message.channel.send(mess)
- 
   if message.content.startswith('$inspire'):
     quot = quotes.inspire_quote()
     await message.channel.send(quot)
   elif message.content.startswith('$get quote'):
     await message.channel.send(quotes.get_quote())
+
+  if message.attachments: 
+    attachment= message.attachments
+    url_attach = urldetector.attachment_url_detector(str(attachment))
+    
+    print(url_attach)
+    
+
 
 keep_alive()
 client.run(my_secret)
