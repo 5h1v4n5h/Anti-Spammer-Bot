@@ -14,7 +14,7 @@ def urldetector(message):
 def url_validator(url_list):
   for i in url_list:
     valid=validators.url(i)
-    if valid != False:
+    if valid != True:
       url_list.remove(i)
   return url_list
 

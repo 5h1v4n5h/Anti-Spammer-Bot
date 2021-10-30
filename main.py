@@ -2,6 +2,7 @@ import discord
 import os
 from keep_alive import keep_alive
 from urlchecker import urlchecker
+import attachment_virusscan
 import quotes
 import urldetector
 
@@ -39,10 +40,13 @@ async def on_message(message):
 
   if message.attachments: 
     attachment= message.attachments
+    #message.save
     url_attach = urldetector.attachment_url_detector(str(attachment))
-    
     print(url_attach)
-    
+    mess = attachment_virusscan.file_scanner(url_attach)
+    if mess != None:
+      mess = f'{message.author.mention}'+mess 
+      await message.reply(mess)
 
 
 keep_alive()
