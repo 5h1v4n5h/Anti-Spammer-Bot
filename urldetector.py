@@ -18,7 +18,3 @@ def url_validator(url_list):
       url_list.remove(i)
   return url_list
 
-def attachment_url_detector(attachment):
-  url = re.findall(regex,attachment.lower())
-  url_list = [x[0] for x in url]
-  return url_list

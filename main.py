@@ -39,14 +39,17 @@ async def on_message(message):
     await message.channel.send(quotes.get_quote())
 
   if message.attachments: 
-    attachment= message.attachments
-    #message.save
-    url_attach = urldetector.attachment_url_detector(str(attachment))
-    print(url_attach)
-    mess = attachment_virusscan.file_scanner(url_attach)
-    if mess != None:
-      mess = f'{message.author.mention}'+mess 
-      await message.reply(mess)
+    image_types = ["png", "jpeg", "gif", "jpg"]
+    for attachment in message.attachments:
+      download_path = "tempdownload/"+attachment.filename
+      if any(attachment.filename.lower().endswith(image) for image in image_types):
+        await attachment.save("tempdownload/"+attachment.filename)
+      else:
+        await attachment.save("tempdownload/"+attachment.filename)
+      mess = attachment_virusscan.file_scanner(download_path)
+      if mess != None:
+        mess = f'{message.author.mention}'+mess 
+        await message.reply(mess)
 
 
 keep_alive()
