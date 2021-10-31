@@ -10,6 +10,6 @@ To counter these sort of attacks we have created bot which checks links and file
 
 Another feature of bot is anti spamming, the bot detects spamming and deletes spammed message , warn user who is spamming.
 
-#Deployment
+##Deployment
 1. create bot on discord by  going on ```https://discord.com/developers```
 2. Get bot api key.<br>3.Get api key from Virus total site
