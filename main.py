@@ -46,12 +46,10 @@ async def on_message(message):
     lst = [msg.content for msg in await message.channel.history().flatten()if msg.author == member]
     lst1=Antispammer.spam_check(list(lst))
     if len(lst1)>0:
-      spammer = True
       if message.content in lst1:
         await message.delete()
-    if spammer == True:
-      mess = f'{message.author.mention}'+"Don\'t Spam \n Your spammed message will be deleated."
-      await message.channel.send(mess)
+        mess = f'{message.author.mention}'+"Don\'t Spam \n Your spammed message will be deleated."
+        await message.channel.send(mess)
   
 
       
@@ -66,10 +64,9 @@ async def on_message(message):
       mess = attachment_virusscan.file_scanner(download_path)
       if mess != None:
         mess = f'{message.author.mention}'+mess 
-        await message.channel.reply(mess)
+        await message.reply(mess)
   
 
-# 
 
 keep_alive()
 client.run(my_secret)
