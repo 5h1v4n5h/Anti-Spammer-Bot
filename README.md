@@ -12,5 +12,4 @@ Another feature of bot is anti spamming, the bot detects spamming and deletes sp
 
 #Deployment
 1. create bot on discord by  going on ```https://discord.com/developers```
-2. Get bot api key.<br>
-3.Get api key from Virus total site
+2. Get bot api key.<br>3.Get api key from Virus total site
