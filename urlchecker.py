@@ -28,12 +28,13 @@ def urlchecker(url):
         res.append(i)
     result_eng = res
     if tot_detect_c > 0:
-      return("The above mentioned url was rated for "+ str(result_eng)[1:-1] + " on "+str(tot_detect_c) + "engines out of "+ str(tot_engine_c) + "engines .\n The Engines which reported this are: " + str(eng_name)[1:-1]+".")
+      return("The above mentioned url was rated for "+ str(result_eng)[1:-1] + " on "+str(tot_detect_c) + " engines out of "+ str(tot_engine_c) + " engines .\n The Engines which reported this are: " + str(eng_name)[1:-1]+".")
     else:
       return("This url " + "has been marked as harmless and clean")
       
   except:
-    print("ok")
+    print(url)
+    print("Error_url")
   #except: VirustotalError as err:
     #return(f"An error occurred: {err}\nCatching and continuing with program.")
 

@@ -6,7 +6,7 @@ regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()
 
 
 def urldetector(message):
-  url = re.findall(regex,message.content.lower())
+  url = re.findall(regex,message.content)
   url_list = [x[0] for x in url]
   valid_url = url_validator(url_list)
   return valid_url
