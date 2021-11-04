@@ -52,8 +52,8 @@ async def on_message(message):
         if len(lst1) > 0:
             if message.content in lst1 :
                 await message.delete()
-                mess = f'{message.author.mention}' + "Don\'t Spam \n Your spammed message will be deleted."
-                await message.channel.send(mess)
+                #mess = f'{message.author.mention}' + "Don\'t Spam \n Your spammed message will be deleted."
+                #await message.channel.send(mess)
 
     if message.attachments:
         image_types = ["png", "jpeg", "gif", "jpg"]

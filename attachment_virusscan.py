@@ -34,7 +34,8 @@ def file_scanner(path):
     if tot_detect_c > 0:
       return("The above mentioned file was rated for "+ str(result_eng)[1:-1] + " on "+str(tot_detect_c) + "engines out of "+ str(tot_engine_c) + "engines .\n The Engines which reported this are: " + str(eng_name)[1:-1]+".\n The file is malacious.")
     else:
-      return("This file " + "has been marked as harmless and clean")
+      return
+      #return("This file " + "has been marked as harmless and clean")
     attachment_delete.deleteattachmentfile(path_file)
   except:
     attachment_delete.deleteattachmentfile(path_file)
